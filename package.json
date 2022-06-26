@@ -1,27 +1,41 @@
 {
-  "name": "straydice.com",
+  "name": "react-frontend-template",
   "version": "0.0.1",
-  "description": "",
+  "description": "React + tailwindcss + webpack",
   "main": "src/entry.tsx",
   "scripts": {
     "dev": "set NODE_ENV=development && webpack serve -c ./webpack/development.ts",
     "start": "set NODE_ENV=production && webpack -c ./webpack/production.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Bill Ewing <bill@nubs.io>",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
     "autoprefixer": "^10.4.7",
     "css-loader": "^6.7.1",
+    "cypress": "^10.2.0",
+    "eslint": "^8.18.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.30.1",
     "fork-ts-checker-webpack-plugin": "^7.2.11",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.2",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.1",
+    "lint-staged": "^13.0.3",
+    "node-fetch": "^3.2.6",
     "postcss": "^8.4.14",
     "postcss-import": "^14.1.0",
     "postcss-loader": "^7.0.0",
     "postcss-preset-env": "^7.7.2",
+    "prettier": "2.7.1",
+    "selenium-webdriver": "^4.3.0",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.1.4",
     "ts-loader": "^9.3.1",
@@ -36,5 +50,8 @@
     "react-dom": "^18.2.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown ."
   }
 }

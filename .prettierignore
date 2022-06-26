@@ -1,0 +1,2 @@
+node_modules/
+!**/*.([tj]sx?|json|yml|(le|sa|s)?css)

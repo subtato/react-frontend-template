@@ -11,47 +11,49 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
+      },
+      {
+        test: /\.hbs$/,
+        use: 'handlebars-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.css$/i,
         use: [
-          "style-loader",
-          "css-loader",
+          'style-loader',
+          'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    "postcss-preset-env",
-                    {
-                    },
-                  ],
-                ],
-              },
-            },
-          },
-        ],
-      },    ],
+                plugins: [['postcss-preset-env', {}]]
+              }
+            }
+          }
+        ]
+      }
+    ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.css'],
+    extensions: ['.tsx', '.ts', '.js', '.css']
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: path.join(__dirname, 'public')
     },
     compress: true,
-    port: 9000,
+    port: 9000
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new HtmlWebpackPlugin({
-
+      meta: {},
+      title: 'A New React App',
+      template: 'templates/default.hbs'
     }),
     new ForkTsCheckerWebpackPlugin()
   ]
