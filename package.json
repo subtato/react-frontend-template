@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "React + tailwindcss + webpack",
   "main": "src/entry.tsx",
+  "repository": {
+    "url": "https://github.com/subtato/react-frontend-template",
+    "type": "git"
+  },
   "scripts": {
     "dev": "set NODE_ENV=development && webpack serve -c ./webpack/development.ts",
     "start": "set NODE_ENV=production && webpack -c ./webpack/production.ts",
