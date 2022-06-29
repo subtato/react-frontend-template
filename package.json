@@ -22,7 +22,7 @@
     "@typescript-eslint/parser": "^5.29.0",
     "autoprefixer": "^10.4.7",
     "css-loader": "^6.7.1",
-    "cypress": "^10.2.0",
+    "cypress": "^10.3.0",
     "eslint": "^8.18.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.30.1",
