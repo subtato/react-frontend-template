@@ -1,5 +1,10 @@
 node_modules/
 dist/
+instrumented/
+cypress/videos/**/*.mp4
+cypress/screenshots/**/*.jpe?g
+.nyc_output/
 
 .env
 .env.*
+!.env.default

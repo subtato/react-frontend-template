@@ -10,11 +10,19 @@
   "scripts": {
     "dev": "set NODE_ENV=development && webpack serve -c ./webpack/development.ts",
     "start": "set NODE_ENV=production && webpack -c ./webpack/production.ts",
-    "prepare": "husky install"
+    "cypress": "npx cypress run",
+    "cypress:chrome": "npx cypress run -b chrome",
+    "cypress:edge": "npx cypress run -b edge",
+    "cypress:opera": "npx cypress run -b opera",
+    "cypress:safari": "npx cypress run -b safari",
+    "prepare": "husky install",
+    "wsl:cypress": "./scripts/prepare/env.sh"
   },
   "author": "Bill Ewing <bill@nubs.io>",
   "license": "MIT",
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/webpack-preprocessor": "^5.12.0",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
@@ -34,6 +42,7 @@
     "jest": "^28.1.1",
     "lint-staged": "^13.0.3",
     "node-fetch": "^3.2.6",
+    "nyc": "^15.1.0",
     "postcss": "^8.4.14",
     "postcss-import": "^14.1.0",
     "postcss-loader": "^7.0.0",

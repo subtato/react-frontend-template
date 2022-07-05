@@ -1,2 +1,3 @@
 node_modules/
+instrumented/
 !**/*.([tj]sx?|json|yml|(le|sa|s)?css)
