@@ -13,5 +13,13 @@ export default defineConfig({
       }
     }
   },
-  videoCompression: 15
+
+  videoCompression: 15,
+
+  component: {
+    devServer: {
+      framework: 'react',
+      bundler: 'webpack'
+    }
+  }
 });

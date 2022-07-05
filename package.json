@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "React + tailwindcss + webpack",
   "main": "src/entry.tsx",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "repository": {
     "url": "https://github.com/subtato/react-frontend-template",
     "type": "git"
